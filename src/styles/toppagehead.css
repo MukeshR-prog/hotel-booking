@@ -1,0 +1,20 @@
+.top-box{
+    display: flex;
+    padding: 10px 20px;
+    justify-content: space-between;
+    background-color: white;
+}
+.top-in{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.top-in-text{
+    font-size: 16px;
+}
+.top-left-button{
+    background-color: #E4E8EE;
+    border-radius: 25px;
+    font-size: 20px;
+    padding: 5px;
+}
