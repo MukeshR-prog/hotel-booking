@@ -71,7 +71,7 @@
   }
   
   .dot {
-    margin-right: 8px;
+    /* margin-right: 8px; */
     background-color: #CED3DD;
     border-radius: 50%;
     height: 8px;

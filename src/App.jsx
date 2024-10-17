@@ -6,6 +6,7 @@ import Toppagehead from './component/toppagehead';
 import Breadcrump from './component/breadcrump';
 import Userdetail from './component/userdetail';
 import Datedetails from './component/Datedetails';
+import Unitdetails from './component/Unitdetails';
 
 function App() {
   
@@ -23,7 +24,7 @@ function App() {
           <div className='content'>
           <div className='content-three'>
             <div className='content-1'><Userdetail/><Datedetails/></div>
-            <div className='content-2'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores voluptatum velit commodi veritatis! Animi rem quo sunt, vero dolorum illum numquam, nulla magnam illo aspernatur porro doloribus possimus eum odit?</div>
+            <div className='content-2'><Unitdetails/></div>
             <div className='content-3'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam ducimus officiis laudantium perspiciatis odio ad, voluptatum illum debitis esse ex saepe laborum, cum sapiente vel sunt. Quisquam sint ipsam totam?</div>
           </div>
             </div>
