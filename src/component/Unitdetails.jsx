@@ -6,6 +6,7 @@ import home from '../assets/home.png';
 import bath from '../assets/bath.svg';
 import { FaPlus } from "react-icons/fa6";
 import { RiDeleteBin6Line } from "react-icons/ri";
+import Customise from './Customize';
 
 function Unitdetails() {
   const initialUnits = [
@@ -63,8 +64,8 @@ function Unitdetails() {
   };
 
   return (
-    <Box sx={{ padding: '10px', height: '480px', display: 'flex', flexDirection: 'column', justifyContent: 'space-between' }}>
-      <Typography sx={{ fontSize: '14px', color: '#4E5A6B' }}>Unit Details</Typography>
+    <Box sx={{ padding: '10px', height: '480px', display: 'flex', flexDirection: 'column', justifyContent: 'space-around' }}>
+      <Typography sx={{ fontSize: '14px', color: '#4E5A6B',margin:'5px 0px' }}>Unit Details</Typography>
       <Grid container spacing={1} sx={{
         height: '450px', overflow: 'scroll', scrollbarWidth: 'none',
         '&::-webkit-scrollbar': {
@@ -73,14 +74,14 @@ function Unitdetails() {
       }}>
         {units.map((unit, index) => (
           <Grid item xs={12} sm={6} md={6} lg={6} key={index}>
-            <Paper elevation={3} sx={{ padding: '10px', position: 'relative', borderRadius: '12px',height:'210px',display:'flex',flexDirection:'column',justifyContent:'space-between' }}>
+            <Paper elevation={3} sx={{ padding: '10px', position: 'relative', borderRadius: '12px',height:'230px',display:'flex',flexDirection:'column',justifyContent:'space-between' }}>
               {/* Image and Delete button */}
               <Box sx={{ position: 'relative' }}>
                 <Avatar
                   alt="Unit Image"
                   src={Image} // Using a local image
                   variant="square"
-                  sx={{ width: '100%', height: '100px', borderRadius: '5px' }}
+                  sx={{ width: '100%', height: '110px', borderRadius: '5px' }}
                 />
                 <IconButton
                   sx={{ position: 'absolute', top: '8px', right: '8px', backgroundColor: 'white', padding: '4px' }}
@@ -91,8 +92,8 @@ function Unitdetails() {
                   <Typography
                     sx={{
                       position: 'absolute',
-                      top: '90px',
-                      left: '111px',
+                      top: '100px',
+                      left: '123px',
                       backgroundColor: '#FFF4EB',
                       color: '#FF9340',
                       padding: '2px 8px',
@@ -131,14 +132,8 @@ function Unitdetails() {
                     color: '#98A0AC',
                   }}>{unit.sqfeet}</Typography>
                 </Box>
-                {/* <Box sx={{ display: 'flex', alignItems: 'center',  marginTop: '8px' ,justifyContent:'space-evenly'}}>
-                  <Typography sx={{display:'flex',alignItems:'center',color:'#98A0AC',fontSize:'14px',justifyContent:'space-between'}}><img src={bed} />{unit.bath}</Typography>
-                  <Badge className='dot'></Badge>
-                  <Typography sx={{display:'flex',alignItems:'center',color:'#98A0AC',fontSize:'14px',justifyContent:'space-between'}} > <img src={bath} />{unit.bed}</Typography>
-                  <Badge className='dot'></Badge>
-                  <Typography sx={{display:'flex',alignItems:'center',color:'#98A0AC',fontSize:'14px',justifyContent:'space-between'}}><img src={home} />{unit.bhk}</Typography>
-                </Box> */}
-                <Box sx={{ display: 'flex', alignItems: 'center',justifyContent:'space-around '}}>
+
+                <Box sx={{ display: 'flex', alignItems: 'center',justifyContent:'space-around',margin:'5px -2px'}}>
                     <img src={bed} />
                     <Typography sx={{display:'flex',alignItems:'center',color:'#98A0AC',fontSize:'14px',justifyContent:'space-between'}} >{unit.bed}</Typography>
                     <Badge className='dot'></Badge>
@@ -149,7 +144,8 @@ function Unitdetails() {
                     <Typography sx={{display:'flex',alignItems:'center',color:'#98A0AC',fontSize:'14px',justifyContent:'space-between'}}>{unit.bhk}</Typography>
                 </Box>
                 <Box sx={{alignItems:'center',display:'flex',justifyContent:'center'}}>
-                <Button variant="text" size="small" sx={{ textTransform:'none',display:'flex',alignItems:'center',justifyContent:'space-around',width:'110px'}}><FaPlus />Customise</Button>
+                  <Customise/>
+                {/* <Button variant="text" size="small" sx={{ textTransform:'none',display:'flex',alignItems:'center',justifyContent:'space-around',width:'110px'}}><FaPlus />Customise</Button> */}
               </Box>
               </Box>
             </Paper>
