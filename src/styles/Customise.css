@@ -1,0 +1,45 @@
+/* Styles for the Customize Button */
+
+  
+  /* Dropdown menu paper styles */
+  .menu-paper {
+    box-shadow: 0px 0px 12px #00000014;
+    border: 1px solid #e4e8ee;
+    border-radius: 4px;
+    padding: 0px 10px;
+  }
+  
+  /* Styles for each menu item */
+  .menu-item {
+    width: auto;
+    font-weight: semibold;
+    font-size: 12px;
+    color: #4e5a6b;
+    border-bottom: 1px solid #e4e8ee;
+  }
+  
+  .menu-item:last-child {
+    border-bottom: none;
+  }
+  
+  .menu-item:hover {
+    background-color: none;
+  }
+  
+  /* Close Button */
+  .dialog-close-button {
+    position: absolute;   /* Absolute positioning */
+    left: 700px;          /* Position the button 16px from the right */
+    /* top: 16px;            Position the button 16px from the top */
+    color: #b0b0b0;       /* A grey color */
+    z-index: 10;          /* Ensure it appears above other elements */
+  }
+  
+  /* Dialog Title */
+  .dialog-head {
+    position: relative;    /* Ensure the close button is positioned relative to this container */
+    font-size: 16px;
+    font-weight: bolder;
+    padding-right: 40px;   /* Add some padding to the right for the close button */
+  }
+  

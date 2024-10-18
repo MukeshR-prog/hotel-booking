@@ -16,7 +16,10 @@ const Userdetail = () => {
     <Box className='user-main-card'>
       <Typography className='user-head' sx={{ fontSize: '14px' }}>Lead Details</Typography>
     <div className="card">
-      <Avatar className="avatar" src={profile} />
+
+      <Box className="avatar">
+        <img src={profile}/>
+      </Box>
       <div className="details">
             <div className="name-status">
             <span className="name">{details.name}</span>

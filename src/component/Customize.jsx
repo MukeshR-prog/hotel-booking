@@ -1,43 +1,69 @@
 import React, { useState } from "react";
-import { Button, Menu, MenuItem } from "@mui/material";
-import { FaPlus, FaChevronDown } from "react-icons/fa";
+import {
+  Button,
+  Menu,
+  MenuItem,
+  Dialog,
+  DialogTitle,
+  DialogContent,
+  Typography,
+  DialogActions,
+  IconButton,
+} from "@mui/material";
+import { FaPlus } from "react-icons/fa";
+import { IoCloseOutline } from "react-icons/io5";
+import "../styles/Customise.css";
+import Popupside1 from "./Popupside1";
+import Popupside1delete from "./Popupside1delete";
 
 export default function Customise() {
   const [anchorEl, setAnchorEl] = useState(null);
+  const [openDialog, setOpenDialog] = useState("");
 
-  // The options for the dropdown menu
-  const dropdownOptions = ["Add Pricing Component", "Add Amenities", "Add Utilities", "Add Discount","Remove Component"];
+  const dropdownOptions = [
+    "Add Pricing Component",
+    "Add Amenities",
+    "Add Utilities",
+    "Add Discount",
+    "Remove Component",
+  ];
 
-  // Open the dropdown menu
   const handleMenuOpen = (event) => {
     setAnchorEl(event.currentTarget);
   };
 
-  // Close the dropdown menu
   const handleMenuClose = () => {
     setAnchorEl(null);
   };
+
+  const handleMenuItemClick = (option) => {
+    setOpenDialog(option);
+    handleMenuClose();
+  };
+
+  const handleDialogClose = () => {
+    setOpenDialog("");
+  };
+
   const isMenuOpen = Boolean(anchorEl);
+
   return (
     <>
       {/* Customise Button */}
       <Button
         variant="text"
         size="small"
-        startIcon={<FaPlus style={{fontSize:'13px'}} />}
+        startIcon={<FaPlus style={{ fontSize: "12px", }} />}
         onClick={handleMenuOpen}
         sx={{
-          textTransform: "none",
-          display: "flex",
-          alignItems: "center",
-          justifyContent: "space-around",
-          width: "110px",
-          color:'#5078E1',
-          fontSize: "12px",
-          fontWeight: "semibold",
-          padding: "4px 10px",
           backgroundColor: isMenuOpen ? "#F1F7FF" : "white",
+          textTransform:'none',
+          fontSize:'12px',
+          fontWeight:'semibold',
+          color:'#5078e1',
+          width:'110px'
         }}
+      
       >
         Customise
       </Button>
@@ -47,44 +73,180 @@ export default function Customise() {
         anchorEl={anchorEl}
         open={Boolean(anchorEl)}
         onClose={handleMenuClose}
-        sx={{
-          "& .MuiMenu-paper": {
-            boxShadow: "0px 0px 12px #00000014",
-            border: "1px solid #E4E8EE",
-            borderRadius: "4px",
-            padding:'0px 10px'
-          },
-        }}
-        // MenuListProps={{
-        //   sx: {
-        //     padding: "0", // Remove default padding
-        //   },
-        // }}
+        classes={{ paper: "menu-paper" }} // Apply custom class
       >
         {/* Dropdown Options */}
         {dropdownOptions.map((option, index) => (
           <MenuItem
             key={index}
-            onClick={handleMenuClose} // Close the menu when clicking an item
-            sx={{
-              width: "auto",
-              fontWeight: "semibold",
-              fontSize: "12px",
-              color: "#4E5A6B",
-            //   padding:'10px',
-              borderBottom: "1px solid #E4E8EE",
-              "&:last-child": {
-                borderBottom: "none", // No border for the last item
-              },
-              "&:hover": {
-                backgroundColor: "none", // Add hover effect
-              },
+            onClick={() => handleMenuItemClick(option)}
+            className="menu-item"
+            sx={{width:'auto',
+              fontWeight:"semibold",
+              fontSize:"12px",
+              color:'#4e5a6b',
+              borderBottom:'1px solid #e4e8ee'
             }}
           >
             {option}
           </MenuItem>
         ))}
       </Menu>
+
+      {/* Dialog for Add Pricing Component */}
+      <Dialog
+        open={openDialog === "Add Pricing Component"}
+        onClose={handleDialogClose}
+        maxWidth="sm"
+        fullWidth
+      >
+        <DialogTitle>
+          Add Pricing Component
+          <IconButton
+            aria-label="close"
+            onClick={handleDialogClose}
+            className="dialog-close-button"
+          >
+            <IoCloseOutline />
+          </IconButton>
+        </DialogTitle>
+        <DialogContent dividers>
+          <Typography>Add pricing details for the component here.</Typography>
+        </DialogContent>
+        <DialogActions>
+          <Button
+            onClick={handleDialogClose}
+            variant="contained"
+            color="primary"
+          >
+            Close
+          </Button>
+        </DialogActions>
+      </Dialog>
+
+      {/* Dialog for Add Amenities */}
+      <Dialog
+        open={openDialog === "Add Amenities"}
+        onClose={handleDialogClose}
+        maxWidth="sm"
+        fullWidth
+      >
+        <DialogTitle>
+          Add Amenities
+          <IconButton
+            aria-label="close"
+            onClick={handleDialogClose}
+            className="dialog-close-button"
+          >
+            <IoCloseOutline />
+          </IconButton>
+        </DialogTitle>
+        <DialogContent dividers>
+          <Typography>Add details for the amenities here.</Typography>
+        </DialogContent>
+        <DialogActions>
+          <Button
+            onClick={handleDialogClose}
+            variant="contained"
+            color="primary"
+          >
+            Close
+          </Button>
+        </DialogActions>
+      </Dialog>
+
+      {/* Dialog for Add Utilities */}
+      <Dialog
+        open={openDialog === "Add Utilities"}
+        onClose={handleDialogClose}
+        maxWidth="sm"
+        fullWidth
+      >
+        <DialogTitle>
+          Add Utilities
+          <IconButton
+            aria-label="close"
+            onClick={handleDialogClose}
+            className="dialog-close-button"
+          >
+            <IoCloseOutline />
+          </IconButton>
+        </DialogTitle>
+        <DialogContent dividers>
+          <Typography>Add details for the utilities here.</Typography>
+        </DialogContent>
+        <DialogActions>
+          <Button
+            onClick={handleDialogClose}
+            variant="contained"
+            color="primary"
+          >
+            Close
+          </Button>
+        </DialogActions>
+      </Dialog>
+
+      {/* Dialog for Add Discount */}
+      <Dialog
+        open={openDialog === "Add Discount"}
+        onClose={handleDialogClose}
+        maxWidth="sm"
+        fullWidth
+      >
+        <DialogTitle>
+          Add Discount
+          <IconButton
+            aria-label="close"
+            onClick={handleDialogClose}
+            className="dialog-close-button"
+          >
+            <IoCloseOutline />
+          </IconButton>
+        </DialogTitle>
+        <DialogContent dividers>
+          <Typography>Add discount information here.</Typography>
+        </DialogContent>
+        <DialogActions>
+          <Button
+            onClick={handleDialogClose}
+            variant="contained"
+            color="primary"
+          >
+            Close
+          </Button>
+        </DialogActions>
+      </Dialog>
+
+      {/* Dialog for Remove Component */}
+      <Dialog
+        open={openDialog === "Remove Component"}
+        onClose={handleDialogClose}
+        maxWidth={false}  // Disable fixed width
+        fullWidth
+        PaperProps={{
+          sx: {
+            width: 'auto',  // Adjust based on content width
+            maxWidth: '90vw',  // Maximum width limit
+            padding: 2
+          }
+        }}
+      >
+        <DialogTitle className="dialog-head">
+          Remove Component
+          {/* Close Button */}
+          <IconButton
+            aria-label="close"
+            onClick={handleDialogClose}
+            className="dialog-close-button"
+          >
+            <IoCloseOutline />
+          </IconButton>
+        </DialogTitle>
+        <DialogContent sx={{ display: 'flex',  }}> {/* Add gap between components */}
+          <Popupside1 />
+          <Popupside1delete />
+        </DialogContent>
+      </Dialog>
     </>
   );
 }

@@ -4,7 +4,6 @@ import Image from '../assets/estate.jpeg'; // Import your image
 import bed from '../assets/bed.png';
 import home from '../assets/home.png';
 import bath from '../assets/bath.svg';
-import { FaPlus } from "react-icons/fa6";
 import { RiDeleteBin6Line } from "react-icons/ri";
 import Customise from './Customize';
 
@@ -25,21 +24,32 @@ function Unitdetails() {
       estate: "Jumeirah Estate",
       amount: "$ 1,200",
       description: "Jumeirah Golf Estate",
-      sqfeet: "2000 Sq.Ft",
-      bed: "2",
-      bath: "2",
-      bhk: "2BHK",
+      sqfeet: "2400 Sq.Ft",
+      bed: "3",
+      bath: "3",
+      bhk: "3BHK",
       discounted: false,
       amountColor: 'black'
     },
     {
       estate: "Jumeirah Estate",
-      amount: "$ 1,200",
+      amount: "$ 1,500",
       description: "Jumeirah Golf Estate",
-      sqfeet: "2000 Sq.Ft",
-      bed: "2",
-      bath: "2",
-      bhk: "2BHK",
+      sqfeet: "2800 Sq.Ft",
+      bed: "4",
+      bath: "4",
+      bhk: "4BHK",
+      discounted: false,
+      amountColor: 'black'
+    },
+    {
+      estate: "Jumeirah Estate",
+      amount: "$ 1,800",
+      description: "Jumeirah Golf Estate",
+      sqfeet: "3200 Sq.Ft",
+      bed: "5",
+      bath: "5",
+      bhk: "5BHK",
       discounted: false,
       amountColor: 'black'
     }
@@ -64,7 +74,7 @@ function Unitdetails() {
   };
 
   return (
-    <Box sx={{ padding: '10px', height: '480px', display: 'flex', flexDirection: 'column', justifyContent: 'space-around' }}>
+    <Box sx={{ padding: '10px', height: '470px', display: 'flex', flexDirection: 'column', justifyContent: 'space-around' }}>
       <Typography sx={{ fontSize: '14px', color: '#4E5A6B',margin:'5px 0px' }}>Unit Details</Typography>
       <Grid container spacing={1} sx={{
         height: '450px', overflow: 'scroll', scrollbarWidth: 'none',
@@ -93,7 +103,7 @@ function Unitdetails() {
                     sx={{
                       position: 'absolute',
                       top: '100px',
-                      left: '123px',
+                      left: '117px',
                       backgroundColor: '#FFF4EB',
                       color: '#FF9340',
                       padding: '2px 8px',

@@ -10,15 +10,29 @@ body {
   height:100vh;
 }
 .front-content{
-  padding: 20px;
+  /* padding: 20px; */
   background-color: #ffffff;
-  margin: 25px;
+  margin: 20px;
   border-radius: 15px;
   display: flex;
   flex-direction: column;
 }
 .bread-crump{
-  border-bottom: 2px solid #E4E8EE;
+  margin: 15px ;
+}
+.content{
+ 
+  display: flex;
+  border-top: 1px solid #E4E8EE;
+  flex-direction: column;
+}
+.content-bottom{
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+  /* background-color: red; */
+  border-bottom-left-radius: 15px;
+  border-bottom-right-radius: 15px;
 }
 .content-three{
   width: 100%;
@@ -26,15 +40,23 @@ body {
   justify-content: space-evenly;
 }
 .content-1{
-  padding: 25px;
-  width:30%;
+  margin: 5px 20px;
+  padding: 10px 5px;
+  width:33%;
   display: flex;
+  gap: 10px;
   flex-direction: column;
+  justify-content: space-around;
+  height: 300px;
 }
 .content-2{
   background-color: #F5F7FAE6;
-  width:35%;
+  width:33%;
 }
 .content-3{
-  width:35%;
+  width:33%;
+}
+.bot-button{
+  display: flex;
+  gap: 10px;
 }
