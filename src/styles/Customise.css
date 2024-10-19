@@ -28,18 +28,15 @@
   
   /* Close Button */
   .dialog-close-button {
-    position: absolute;   /* Absolute positioning */
-    left: 700px;          /* Position the button 16px from the right */
-    /* top: 16px;            Position the button 16px from the top */
-    color: #b0b0b0;       /* A grey color */
-    z-index: 10;          /* Ensure it appears above other elements */
+    color: #b0b0b0;     
   }
   
   /* Dialog Title */
   .dialog-head {
-    position: relative;    /* Ensure the close button is positioned relative to this container */
+    display: flex;
+    justify-content: space-between;
     font-size: 16px;
     font-weight: bolder;
-    padding-right: 40px;   /* Add some padding to the right for the close button */
+    padding-right: 40px;   
   }
   

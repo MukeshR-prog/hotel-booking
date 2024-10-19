@@ -22,7 +22,7 @@ export default function Popupside1delete() {
   };
 
   return (
-    <Box sx={{ minWidth: 400, margin: 'auto', padding: 2 ,}}>
+    <Box sx={{ minWidth: 400, margin: 'auto', padding: 1 ,}}>
       <Paper  sx={{ padding: 2, borderRadius: 0,boxShadow:'none',backgroundColor:'#F8F9FB',height:'465px',display:'flex',flexDirection:'column',justifyContent:'space-between  ' }}>
         <Box>
         <Typography sx={{ fontWeight: 'bold', mb: 2,fontSize:'14px' }}>

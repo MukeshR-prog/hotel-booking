@@ -10,6 +10,9 @@ const PriceList = () => {
     { billName: "Bill Name Here", price: 1000, discountType: "AED" },
     { billName: "Utility Name Here", price: 1000, discountType: "AED" },
     { billName: "Amenity Name Here", price: 1000, discountType: "AED" },
+    { billName: "Bill Name Here", price: 1000, discountType: "AED" },
+    { billName: "Bill Name Here", price: 1000, discountType: "AED" },
+    { billName: "Bill Name Here", price: 1000, discountType: "AED" },
   ]);
 
   const handleDiscountChange = (index, newDiscount) => {
@@ -29,10 +32,18 @@ const PriceList = () => {
   };
 
   return (
-    <Paper elevation={3} style={{ padding: "20px", width: "400px", borderRadius: "8px" }}>
-      <Typography variant="h6" fontWeight="bold" gutterBottom>
+    <Box elevation={3} style={{ padding: "20px", width: "400px", borderRadius: "8px" }}>
+      <Box sx={{backgroundColor:'#F8F9FB',padding:'10px 20px'}}>
+      <Typography sx={{fontSize:'14px',fontWeight:'bold',color:'#4E5A6B'}}>
         UNIT PRICE DETAIL
       </Typography>
+      <Box sx={{
+        height:'400px',overflow:'scroll',
+        scrollbarWidth: 'none',
+        '&::-webkit-scrollbar': {
+          display: 'none', // For Chrome, Safari, and Opera
+        },
+      }}>
       {billData.map((bill, index) => (
         <PriceRow
           key={index}
@@ -43,31 +54,31 @@ const PriceList = () => {
           onDiscountTypeChange={(newType) => handleDiscountTypeChange(index, newType)}
         />
       ))}
+      </Box>
 
       <Box
-        display="flex"
-        justifyContent="space-between"
-        alignItems="center"
-        padding="15px 0"
-        marginTop="20px"
-        borderTop="2px solid #e0e0e0"
-        bgcolor="#f5f5f5"
+      sx={{
+        display:'flex',
+        justifyContent:'space-between',
+        alignItems:'center',
+        padding:'10px 5px',
+        backgroundColor:'#E4E8EE'
+      }}
       >
-        <Typography fontWeight="bold">Final Total</Typography>
-        <Typography fontWeight="bold" fontSize="16px">
+        <Typography fontWeight="bold" fontSize="14px">Final Total</Typography>
+        <Typography fontWeight="bold" fontSize="14px">
           ${calculateTotal()}
         </Typography>
       </Box>
-
+      </Box>
       <Button
         variant="contained"
-        color="primary"
         fullWidth
-        style={{ marginTop: "15px", padding: "10px 0", fontSize: "16px" }}
+        style={{ marginTop: "15px", padding: "10px 0", fontSize: "14px",textTransform:'none' ,backgroundColor:'#5078E1'}}
       >
         Apply Discount
       </Button>
-    </Paper>
+    </Box>
   );
 };
 

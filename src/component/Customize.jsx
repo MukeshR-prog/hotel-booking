@@ -15,6 +15,9 @@ import { IoCloseOutline } from "react-icons/io5";
 import "../styles/Customise.css";
 import Popupside1 from "./Popupside1";
 import Popupside1delete from "./Popupside1delete";
+import PriceList from "./PriceList";
+import Unitpricedetails from "./Unitpricedetails";
+import Displayammenities from "./Displayammenities";
 
 export default function Customise() {
   const [anchorEl, setAnchorEl] = useState(null);
@@ -128,10 +131,17 @@ export default function Customise() {
       <Dialog
         open={openDialog === "Add Amenities"}
         onClose={handleDialogClose}
-        maxWidth="sm"
+        maxWidth={false}  // Disable fixed width
         fullWidth
+        PaperProps={{
+          sx: {
+            width: 'auto',  // Adjust based on content width
+            maxWidth: '90vw',  // Maximum width limit
+            padding: 0
+          }
+        }}
       >
-        <DialogTitle>
+        <DialogTitle className="dialog-head">
           Add Amenities
           <IconButton
             aria-label="close"
@@ -141,28 +151,27 @@ export default function Customise() {
             <IoCloseOutline />
           </IconButton>
         </DialogTitle>
-        <DialogContent dividers>
-          <Typography>Add details for the amenities here.</Typography>
+        <DialogContent >
+         <Displayammenities/>
         </DialogContent>
-        <DialogActions>
-          <Button
-            onClick={handleDialogClose}
-            variant="contained"
-            color="primary"
-          >
-            Close
-          </Button>
-        </DialogActions>
+
       </Dialog>
 
       {/* Dialog for Add Utilities */}
       <Dialog
         open={openDialog === "Add Utilities"}
         onClose={handleDialogClose}
-        maxWidth="sm"
+        maxWidth={false}  // Disable fixed width
         fullWidth
+        PaperProps={{
+          sx: {
+            width: 'auto',  // Adjust based on content width
+            maxWidth: '90vw',  // Maximum width limit
+            padding: 1
+          }
+        }}
       >
-        <DialogTitle>
+        <DialogTitle className="dialog-head">
           Add Utilities
           <IconButton
             aria-label="close"
@@ -172,28 +181,27 @@ export default function Customise() {
             <IoCloseOutline />
           </IconButton>
         </DialogTitle>
-        <DialogContent dividers>
-          <Typography>Add details for the utilities here.</Typography>
+        <DialogContent sx={{ display: 'flex',  }}> {/* Add gap between components */}
+          <Popupside1 />
+          <Unitpricedetails/>
         </DialogContent>
-        <DialogActions>
-          <Button
-            onClick={handleDialogClose}
-            variant="contained"
-            color="primary"
-          >
-            Close
-          </Button>
-        </DialogActions>
       </Dialog>
 
       {/* Dialog for Add Discount */}
       <Dialog
         open={openDialog === "Add Discount"}
         onClose={handleDialogClose}
-        maxWidth="sm"
+        maxWidth={false}
         fullWidth
+        PaperProps={{
+          sx: {
+            width: 'auto',  // Adjust based on content width
+            maxWidth: '90vw',  // Maximum width limit
+            padding: 0
+          }
+        }}
       >
-        <DialogTitle>
+        <DialogTitle className="dialog-head">
           Add Discount
           <IconButton
             aria-label="close"
@@ -203,18 +211,11 @@ export default function Customise() {
             <IoCloseOutline />
           </IconButton>
         </DialogTitle>
-        <DialogContent dividers>
-          <Typography>Add discount information here.</Typography>
+        <DialogContent sx={{ display: 'flex',  }}> {/* Add gap between components */}
+          <Popupside1 />
+          <PriceList/>
         </DialogContent>
-        <DialogActions>
-          <Button
-            onClick={handleDialogClose}
-            variant="contained"
-            color="primary"
-          >
-            Close
-          </Button>
-        </DialogActions>
+       
       </Dialog>
 
       {/* Dialog for Remove Component */}
@@ -227,7 +228,7 @@ export default function Customise() {
           sx: {
             width: 'auto',  // Adjust based on content width
             maxWidth: '90vw',  // Maximum width limit
-            padding: 2
+            padding: 1
           }
         }}
       >
@@ -242,7 +243,7 @@ export default function Customise() {
             <IoCloseOutline />
           </IconButton>
         </DialogTitle>
-        <DialogContent sx={{ display: 'flex',  }}> {/* Add gap between components */}
+        <DialogContent sx={{ display: 'flex',justifyContent:'space-between'  }}> {/* Add gap between components */}
           <Popupside1 />
           <Popupside1delete />
         </DialogContent>
