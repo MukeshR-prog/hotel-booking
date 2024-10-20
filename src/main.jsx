@@ -9,12 +9,14 @@ import Unitpricedetails from "./component/Unitpricedetails.jsx";
 import Addamenities from "./component/Addamenities.jsx";
 import AmmenitiesUtils from "./component/AmmenitiesUtils.jsx";
 import Displayammenities from "./component/Displayammenities.jsx";
+import Primesecond from "./component/Primesecond.jsx";
 
 createRoot(document.getElementById("root")).render(
   <StrictMode>
     <App />
    <Displayammenities/>
-    <Addamenities/>
+    {/* <Addamenities/> */}
+    <Primesecond/>
     <Unitpricedetails />
     {/* <PriceList />
    

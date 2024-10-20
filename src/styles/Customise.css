@@ -34,9 +34,7 @@
   /* Dialog Title */
   .dialog-head {
     display: flex;
+    align-items: center;
     justify-content: space-between;
-    font-size: 16px;
-    font-weight: bolder;
-    padding-right: 40px;   
   }
   
