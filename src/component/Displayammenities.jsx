@@ -66,7 +66,7 @@ export default function Displayammenities() {
       </Typography>
       <Box
         sx={{
-          height: "400px",
+          height: "350px",
           overflow: "scroll",
           scrollbarWidth: "none",
           "&::-webkit-scrollbar": {

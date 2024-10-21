@@ -1,5 +1,5 @@
 import React from "react";
-import { Box, Grid, Typography, Button } from "@mui/material";
+import { Box, Grid, Typography, Button, Badge } from "@mui/material";
 import { FaRulerCombined, FaDownload } from "react-icons/fa";
 import "../styles/popupside1.css";
 import bed from "../assets/bed.png";
@@ -51,7 +51,7 @@ export default function Popupside1() {
                   alt="Thumbnail 4"
                   className="property-thumbnail"
                 />
-                <span className="thumbnail-overlay">+8</span>{" "}
+                <span className="thumbnail-overlay">+8</span>
                 {/* Centered span with background */}
               </Box>
             </Grid>
@@ -74,7 +74,7 @@ export default function Popupside1() {
             </Typography>
           </Box>
         </Box>
-        <Typography sx={{ fontSize: "14px", color: "#4E5A6B" }}>
+        <Typography style={{ fontSize: "14px", color: "#4E5A6B" ,}}>
           Rubix Apartment, K Tower, Floor 1
         </Typography>
       </Box>
@@ -89,6 +89,7 @@ export default function Popupside1() {
             2
           </Typography>
         </Box>
+        <Badge className='dot'></Badge>
         <Box className="property-icon-text">
           <img src={bath} alt="Bath" className="property-icon-image" />
           <Typography
@@ -97,6 +98,7 @@ export default function Popupside1() {
             2
           </Typography>
         </Box>
+        <Badge className='dot'></Badge>
         <Box className="property-icon-text">
           <img src={home} alt="Home" className="property-icon-image" />
           <Typography
@@ -105,6 +107,7 @@ export default function Popupside1() {
             2BHK
           </Typography>
         </Box>
+        <Badge className='dot'></Badge>
         <Box className="property-icon-text">
           <img src={sqft} className="property-icon-image" />
           <Typography
@@ -133,11 +136,12 @@ export default function Popupside1() {
             Handbook
           </Box>
         </Typography>
-        <Button
-          style={{ fontWeight: "semibold", fontSize: "14px", color: "#5078E1" }}
+        <Box
+        
+          sx={{ fontWeight: "semibold", fontSize: "14px", color: "#5078E1", }}
         >
           View / Download
-        </Button>
+        </Box>
       </Box>
     </Box>
   );

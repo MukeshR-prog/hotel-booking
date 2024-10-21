@@ -50,11 +50,12 @@
     display: flex;
     align-items: center;
     gap: 1rem;
+    margin-bottom: 10px;
 }
 
 .unit-code {
     background-color: #F5F7FA;
-    padding: 2px 6px;
+    padding: 4px 6px;
     border-radius: 4px;
     color: #98A0AC;
 }
@@ -62,7 +63,7 @@
 .property-details-container {
     display: flex;
     align-items: center;
-    gap: 2rem;
+    gap: 1rem;
     border-bottom: 1px solid #F5F7FA;
     padding-bottom: 15px;
 }

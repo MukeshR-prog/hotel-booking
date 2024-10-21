@@ -49,13 +49,13 @@ function Primesecond({ onItemClick }) {
                 <Box 
                     key={index} 
                     sx={{
-                        height:'45px',
+                        height:'40px',
                         width: '370px', 
                         padding: '15px', 
                         display: 'flex', 
                         justifyContent: 'space-between', 
                         backgroundColor: item.light, 
-                        marginBottom: '10px',
+                        marginTop: '15px',
                         borderRadius: '5px',
                         cursor: 'pointer' // Add cursor for clickable effect
                     }}

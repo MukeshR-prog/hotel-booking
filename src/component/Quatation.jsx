@@ -12,10 +12,10 @@ import {
 function Quotation() {
   // Data array
   const data = [
-    { description: "Total Amount", qty: "3", amount: "$ 3,600.00" },
-    { description: "Total Discount", qty: "10%", amount: "- $ 100.00" },
-    { description: "Total Refundable", qty: "0%", amount: "$ 0" },
-    { description: "Total Tax", qty: "18%", amount: "$ 648.00" },
+    { description: "Total Amount", qty: "3", amount: "$ 3,600.00" ,border: "1px solid #E4E8EE",pad:'8px 16px 8px 16px',col:'#091B29'},
+    { description: "Total Discount", qty: "10%", amount: "- $ 100.00",border:'none' ,pad:'8px 16px 8px 16px',col:'#4E5A6B'},
+    { description: "Total Refundable", qty: "0%", amount: "$ 0" ,border: "1px solid #E4E8EE",pad:'16px 16px 16px 16px',col:'#091B29'},
+    { description: "Total Tax", qty: "18%", amount: "$ 648.00",border: "1px solid #E4E8EE" ,pad:'16px 16px 16px 16px',col:'#091B29'},
   ];
 
   // Quote Amount
@@ -61,7 +61,8 @@ function Quotation() {
                     fontSize: "14px",
                     borderBottom: "none",
                     fontWeight: "semibold",
-                    borderTop: "1px solid #E4E8EE",
+                    borderTop: row.border,
+                    padding:row.pad
                   }}
                 >
                   {row.description}
@@ -72,7 +73,8 @@ function Quotation() {
                     fontSize: "14px",
                     borderBottom: "none",
                     fontWeight: "normal",
-                    borderTop: "1px solid #E4E8EE",
+                    borderTop: row.border,
+                    padding:row.pad
                   }}
                 >
                   {row.qty}
@@ -84,7 +86,9 @@ function Quotation() {
                     borderBottom: "none",
                     textAlign: "right",
                     fontWeight:'bold',
-                    borderTop: "1px solid #E4E8EE",
+                    borderTop: row.border,
+                    padding:row.pad,
+                    color:row.col
                   }}
                 >
                   {row.amount}

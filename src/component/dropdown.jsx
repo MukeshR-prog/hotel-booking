@@ -4,8 +4,8 @@ import { FaChevronDown } from "react-icons/fa6";
 
 export default function Dropdown() {
   const [anchorEl, setAnchorEl] = useState(null);
-
-  const dropdownOptions = ['Calendar','Calculator', 'Card', 'List'];
+  const [selectoption , setselectoption]=useState('Casagrand')
+  const dropdownOptions = ['Casagrand','Calculator', 'Card', 'List'];
 
   const handleMenuOpen = (event) => {
     setAnchorEl(event.currentTarget);
@@ -14,7 +14,10 @@ export default function Dropdown() {
   const handleMenuClose = () => {
     setAnchorEl(null);
   };
-
+ const handleMenuClick = (option)=>{
+  handleMenuClose();
+  setselectoption(option);
+ }
   return (
     <>
       <Button
@@ -44,7 +47,7 @@ export default function Dropdown() {
           },
         }}
       >
-        Casagrand
+        {selectoption}
       </Button>
 
       <Menu
@@ -72,7 +75,7 @@ export default function Dropdown() {
         {dropdownOptions.map((option, index) => (
           <MenuItem
             key={index}
-            onClick={handleMenuClose}
+            onClick={()=>handleMenuClick(option)}
             sx={{
                 width:'164px',
               fontWeight:'medium',

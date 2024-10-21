@@ -1,10 +1,10 @@
 import React from "react";
-import Detailshead from "./component/Detailshead";
-import Revenue from "./component/Revenue";
+import Revenue from "../component/Revenue";
 import { Box } from "@mui/material";
-import ComponentDropdown from "./component/componentdropdown";
-import Buttoncre from "./component/button";
-import Buttoninvent from "./component/buttoninvent";
+import ComponentDropdown from "../component/componentdropdown";
+import Buttoncre from "../component/button";
+import Buttoninvent from "../component/buttoninvent";
+import Detailshead from "../component/Detailshead";
 function Inventoryitem() {
   const head = {
     title: "Inventory Item Component",

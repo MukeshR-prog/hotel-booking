@@ -6,7 +6,6 @@ import profile from '../assets/leetprof.avif';
 const Userdetail = () => {
   const details = {
     name: "Tom Cruise",
-    imageUrl: "https://via.placeholder.com/150",
     contact: "+91 9090808012",
     email: "Tomcruise2515@mail.com",
     status: "Prospect"

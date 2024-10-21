@@ -1,10 +1,10 @@
 import React from "react";
-import Detailshead from "./component/Detailshead";
+import Detailshead from "../component/Detailshead";
 import { Box } from "@mui/material";
-import Revenue from "./component/Revenue";
-import ComponentDropdown from "./component/componentdropdown";
-import Totalvalue from "./component/Totalvalue";
-import Buttoncre from "./component/button";
+import Revenue from "../component/Revenue";
+import ComponentDropdown from "../component/componentdropdown";
+import Totalvalue from "../component/Totalvalue";
+import Buttoncre from "../component/button";
 
 function Secondary() {
   const head = {

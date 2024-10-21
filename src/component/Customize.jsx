@@ -20,12 +20,12 @@ import PriceList from "./PriceList";
 import Unitpricedetails from "./Unitpricedetails";
 import Displayammenities from "./Displayammenities";
 import Primesecond from "./Primesecond";
-import Primary from "./Dialog items/Primary";
-import Secondary from "./Dialog items/Secondary";
-import Onetimecharges from "./Dialog items/Onetimecharges";
-import Refundables from "./Dialog items/Refundables";
-import Inventoryitem from "./Dialog items/Inventoryitem";
-import Parkingslot from "./Dialog items/Parkingslot";
+import Primary from "./Dialog items/Dialog-subitems/Primary";
+import Secondary from "./Dialog items/Dialog-subitems/Secondary";
+import Onetimecharges from "./Dialog items/Dialog-subitems/Onetimecharges";
+import Refundables from "./Dialog items/Dialog-subitems/Refundables";
+import Inventoryitem from "./Dialog items/Dialog-subitems/Inventoryitem";
+import Parkingslot from "./Dialog items/Dialog-subitems/Parkingslot";
 
 export default function Customise() {
   const [anchorEl, setAnchorEl] = useState(null);
@@ -125,7 +125,7 @@ export default function Customise() {
         }}
       >
         <DialogTitle sx={{ fontSize: "16px", fontWeight: "bold",display:'flex',justifyContent:'space-between',alignItems:'center',borderBottom:'1px solid #E4E8EE' }}>
-          Add Pricing Component
+          Pricing Table
           <IconButton
             aria-label="close"
             onClick={handleDialogClose}
@@ -134,7 +134,7 @@ export default function Customise() {
           </IconButton>
         </DialogTitle>
 
-        <DialogContent>
+        <DialogContent >
   {selectedItem ? (
     <Box>
       {selectedItem === "Primary" && <Primary />}
@@ -192,7 +192,7 @@ export default function Customise() {
           sx: {
             width: "auto", // Adjust based on content width
             maxWidth: "90vw", // Maximum width limit
-            padding: 1,
+            padding: 0,
           },
         }}
       >
@@ -256,7 +256,7 @@ export default function Customise() {
           sx: {
             width: "auto", // Adjust based on content width
             maxWidth: "90vw", // Maximum width limit
-            padding: 1,
+            padding: 0,
           },
         }}
       >

@@ -11,57 +11,67 @@ function Unitdetails() {
   const initialUnits = [
     {
       estate: "Jumeirah Estate",
-      amount: "$ 900.00",
+      amount: "$ 1200",
+      amount2: "$ 900.00",
       description: "Jumeirah Golf Estate",
       sqfeet: "2000 Sq.Ft",
       bed: "2",
       bath: "2",
       bhk: "2BHK",
       discounted: false,
+      disamount: false,
       amountColor: 'black'
     },
     {
       estate: "Jumeirah Estate",
       amount: "$ 1,200",
+      amount2: "$ 1,080.00",
       description: "Jumeirah Golf Estate",
       sqfeet: "2400 Sq.Ft",
       bed: "3",
       bath: "3",
       bhk: "3BHK",
       discounted: false,
+      disamount: false,
       amountColor: 'black'
     },
     {
       estate: "Jumeirah Estate",
       amount: "$ 1,500",
+      amount2: "$ 1,350.00",
       description: "Jumeirah Golf Estate",
       sqfeet: "2800 Sq.Ft",
       bed: "4",
       bath: "4",
       bhk: "4BHK",
       discounted: false,
+      disamount: false,
       amountColor: 'black'
     },
     {
       estate: "Jumeirah Estate",
       amount: "$ 1,800",
+      amount2: "$ 1,620.00",
       description: "Jumeirah Golf Estate",
       sqfeet: "3200 Sq.Ft",
       bed: "5",
       bath: "5",
       bhk: "5BHK",
       discounted: false,
+      disamount: false,
       amountColor: 'black'
     },
     {
       estate: "Jumeirah Estate",
-      amount: "$ 1,800",
+      amount: "$ 2,000",
+      amount2: "$ 1,800.00",
       description: "Jumeirah Golf Estate",
-      sqfeet: "3200 Sq.Ft",
-      bed: "5",
-      bath: "5",
-      bhk: "5BHK",
+      sqfeet: "3400 Sq.Ft",
+      bed: "6",
+      bath: "6",
+      bhk: "6BHK",
       discounted: false,
+      disamount: false,
       amountColor: 'black'
     }
   ];
@@ -76,9 +86,11 @@ function Unitdetails() {
     if (unit.amountColor === 'black') {
       unit.amountColor = 'orange';
       unit.discounted = true; // Disable the discount when clicked
+      unit.disamount= true;
     } else {
       unit.amountColor = 'black';
       unit.discounted = false; // Re-enable the discount when clicked again
+      unit.disamount= false;
     }
 
     setUnits(updatedUnits);
@@ -95,7 +107,7 @@ function Unitdetails() {
       }}>
         {units.map((unit, index) => (
           <Grid item xs={12} sm={6} md={6} lg={6} key={index}>
-            <Paper elevation={3} sx={{ padding: '10px', position: 'relative', borderRadius: '12px',height:'230px',display:'flex',flexDirection:'column',justifyContent:'space-between' }}>
+            <Paper elevation={3} sx={{ padding: '10px', position: 'relative', borderRadius: '6px',boxShadow:'none',border:'1px solid #E4E8EE',height:'230px',display:'flex',flexDirection:'column',justifyContent:'space-between' }}>
               {/* Image and Delete button */}
               <Box sx={{ position: 'relative' }}>
                 <Avatar
@@ -116,11 +128,12 @@ function Unitdetails() {
                     sx={{
                       position: 'absolute',
                       top: '110px',
-                      left: '140px',
+                      left: '136.5px',
                       backgroundColor: '#FFF4EB',
                       color: '#FF9340',
                       padding: '2px 8px',
-                      borderRadius: '4px',
+                      borderTopLeftRadius:'3.5px',
+                      borderBottomLeftRadius:'3.5px',
                       fontSize: '8px',
                     }}
                   >
@@ -135,7 +148,7 @@ function Unitdetails() {
                     sx={{ fontSize: '14px', color: unit.amountColor, cursor: 'pointer' }}
                     onClick={() => handleAmountClick(index)}
                   >
-                    {unit.amount}
+                   {unit.disamount ? unit.amount2 : unit.amount}
                   </Typography>
                 </Box>
                 <Box sx={{

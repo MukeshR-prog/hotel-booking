@@ -1,15 +1,16 @@
 import React from 'react'
-import Detailshead from './component/Detailshead'
-import Revenue from './component/Revenue'
+import Detailshead from '../component/Detailshead'
+import Revenue from '../component/Revenue'
 import { Box } from '@mui/material'
-import ComponentDropdown from './component/componentdropdown'
-import Totalvalue from './component/Totalvalue'
-import Buttoncre from './component/button'
-function Parkingslot() {
+import ComponentDropdown from '../component/componentdropdown'
+import Totalvalue from '../component/Totalvalue'
+import Buttoncre from '../component/button'
+function Onetimecharges() {
+
     const head = {
-        title:'Parking Slot Component',
-        color:'#B3776D',
-        bgcolor:'#FEEAEA80'
+        title:'One Time Charges',
+        color:'#6DAFB3',
+        bgcolor:'#DBF0F180'
     }
     const dropdown = [
         {
@@ -34,10 +35,11 @@ function Parkingslot() {
       }
       
       const endbut2={
-        title: "Create New Pricing Table",
+        title: "Create Pricing Component",
         color: "#ffffff",
         bgcolor: "#5078E1",
       }
+
       const button1 = ["Lease", "Sales", "Manage", "Stay"];
       const title1='Revenue Type';
       const button2 = ["Yes", "No"];
@@ -74,4 +76,5 @@ function Parkingslot() {
         </Box>
       );
     }
-export default Parkingslot
+
+export default Onetimecharges;

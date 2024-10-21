@@ -1,10 +1,10 @@
 import React from 'react'
-import Detailshead from './component/Detailshead'
-import Revenue from './component/Revenue'
+import Detailshead from '../component/Detailshead'
+import Revenue from '../component/Revenue'
 import { Box } from '@mui/material'
-import ComponentDropdown from './component/componentdropdown'
-import Totalvalue from './component/Totalvalue'
-import Buttoncre from './component/button'
+import ComponentDropdown from '../component/componentdropdown'
+import Totalvalue from '../component/Totalvalue'
+import Buttoncre from '../component/button'
 function Refundables() {
     const head = {
         title:'Refundable Price Component',
