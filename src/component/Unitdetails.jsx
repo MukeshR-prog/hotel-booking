@@ -52,6 +52,17 @@ function Unitdetails() {
       bhk: "5BHK",
       discounted: false,
       amountColor: 'black'
+    },
+    {
+      estate: "Jumeirah Estate",
+      amount: "$ 1,800",
+      description: "Jumeirah Golf Estate",
+      sqfeet: "3200 Sq.Ft",
+      bed: "5",
+      bath: "5",
+      bhk: "5BHK",
+      discounted: false,
+      amountColor: 'black'
     }
   ];
 
@@ -98,12 +109,14 @@ function Unitdetails() {
                 >
                   <RiDeleteBin6Line style={{fontSize:'11px',padding:'1px',color:'#FF4B4B'}} />
                 </IconButton>
-                {unit.discounted && (
+                
+              </Box>
+              {unit.discounted && (
                   <Typography
                     sx={{
                       position: 'absolute',
-                      top: '100px',
-                      left: '117px',
+                      top: '110px',
+                      left: '140px',
                       backgroundColor: '#FFF4EB',
                       color: '#FF9340',
                       padding: '2px 8px',
@@ -114,8 +127,6 @@ function Unitdetails() {
                     % Discount Applied
                   </Typography>
                 )}
-              </Box>
-
               {/* Estate Details */}
               <Box sx={{ }}>
                 <Box sx={{ display: 'flex', justifyContent: 'space-between' }}>
