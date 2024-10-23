@@ -7,16 +7,20 @@ import bath from "../assets/bath.svg";
 import sqft from "../assets/Sqft.svg";
 import book from "../assets/book.svg";
 import home from "../assets/home.png";
-import Image from "../assets/estate.jpeg"; // Use the estate image for the main property image
+import Image from "../assets/estate.jpeg"; 
+import Image4 from "../assets/images4.jpeg"; 
+import Image1 from "../assets/image1.jpg"; 
+import Image2 from "../assets/image2.jpg"; 
+import Image3 from "../assets/image3.jpg"; 
 
 export default function Popupside1() {
   return (
     <Box className="property-card-container">
-      {/* Images Section */}
+     
       <Grid container spacing={2}>
         <Grid item xs={7} className="main-image-container">
           <img
-            src={Image}
+            src={Image1}
             alt="Main Property"
             className="property-main-image"
           />
@@ -25,34 +29,34 @@ export default function Popupside1() {
           <Grid container spacing={1}>
             <Grid item xs={6}>
               <img
-                src={Image} // Use the estate image as the thumbnail
-                alt="Thumbnail 1"
+                src={Image2} 
+                
                 className="property-thumbnail"
               />
             </Grid>
             <Grid item xs={6}>
               <img
-                src={Image} // Use the estate image as the thumbnail
-                alt="Thumbnail 2"
+                src={Image4} 
+                
                 className="property-thumbnail"
               />
             </Grid>
             <Grid item xs={6}>
               <img
-                src={Image} // Use the estate image as the thumbnail
-                alt="Thumbnail 3"
+                src={Image}
+                
                 className="property-thumbnail"
               />
             </Grid>
             <Grid item xs={6}>
               <Box className="property-thumbnail-box">
                 <img
-                  src={Image} // Use the estate image as the thumbnail
-                  alt="Thumbnail 4"
+                  src={Image3} 
+                 
                   className="property-thumbnail"
                 />
                 <span className="thumbnail-overlay">+8</span>
-                {/* Centered span with background */}
+              
               </Box>
             </Grid>
           </Grid>

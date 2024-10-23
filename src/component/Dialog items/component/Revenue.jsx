@@ -3,10 +3,10 @@ import React, { useState } from "react";
 
 function Revenue({button,title}) {
 
-  const [active, setActive] = useState(null); // Track active button
+  const [active, setActive] = useState(null); 
 
   const ButtonClick = (index) => {
-    setActive(index); // Update the active button index
+    setActive(index); 
   };
   return (
     <Box sx={{display:'flex',flexDirection:'column',gap:'5px'}}>

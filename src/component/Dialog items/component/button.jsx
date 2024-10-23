@@ -1,7 +1,7 @@
 import { Box, Button } from '@mui/material'
 import React from 'react'
 
-function Buttoncre({val}) {
+function Buttoncre({val,handleBack}) {
   return (
     <Button sx={{
         minWidth:'auto',
@@ -13,7 +13,8 @@ function Buttoncre({val}) {
        
         color:val.color,
         backgroundColor:val.bgcolor,
-    }}>
+    }} 
+    onClick={handleBack}>
 {val.title}
     </Button>
   )

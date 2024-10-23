@@ -10,7 +10,7 @@ import {
 } from "@mui/material";
 
 function Quotation() {
-  // Data array
+ 
   const data = [
     { description: "Total Amount", qty: "3", amount: "$ 3,600.00" ,border: "1px solid #E4E8EE",pad:'8px 16px 8px 16px',col:'#091B29'},
     { description: "Total Discount", qty: "10%", amount: "- $ 100.00",border:'none' ,pad:'8px 16px 8px 16px',col:'#4E5A6B'},
@@ -18,22 +18,22 @@ function Quotation() {
     { description: "Total Tax", qty: "18%", amount: "$ 648.00",border: "1px solid #E4E8EE" ,pad:'16px 16px 16px 16px',col:'#091B29'},
   ];
 
-  // Quote Amount
+  
   const quoteAmount = "$ 4,148.00";
 
   return (
-    <Box sx={{ borderRadius: "8px", padding: "5px" ,margin:'10px'}}>
-      {/* Quotation Summary Title */}
+    <Box sx={{ borderRadius: "8px", padding: "5px 5px 0 5px" ,margin:'10px 10px 0 10px'}}>
+     
       <Typography sx={{ color: "#4E5A6B", fontSize: "14px", mb: 2 }}>
         Quotation Summary
       </Typography>
 
-      {/* Table container */}
+      
       <Box sx={{height:'439px',display:'flex',flexDirection:'column',justifyContent:'space-between',backgroundColor: "#F7F8FA",alignItems:'center'}}>
       <TableContainer style={{  padding: "5px",margin:'5px' ,alignItems:'center'}}>
         <Table>
           <TableBody>
-            {/* Table header */}
+          
             <TableRow>
               <TableCell
                 sx={{ color: "#98A0AC", fontWeight: "bold", fontSize: "10px" }}
@@ -52,7 +52,7 @@ function Quotation() {
               </TableCell>
             </TableRow>
 
-            {/* Data Rows */}
+           
             {data.map((row, index) => (
               <TableRow key={index}>
                 <TableCell
@@ -81,7 +81,7 @@ function Quotation() {
                 </TableCell>
                 <TableCell
                   sx={{
-                    // color: row.amount.includes("-") ? "#FF5A5A" : "#4E5A6B",
+                    
                     fontSize: "14px",
                     borderBottom: "none",
                     textAlign: "right",
@@ -99,7 +99,7 @@ function Quotation() {
         </Table>
       </TableContainer>
 
-      {/* Quote Amount */}
+    
       <Box sx={{width:'100%',}}>
       <Box
         sx={{

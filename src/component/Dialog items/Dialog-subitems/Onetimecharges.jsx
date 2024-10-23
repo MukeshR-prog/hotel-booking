@@ -5,8 +5,10 @@ import { Box } from '@mui/material'
 import ComponentDropdown from '../component/componentdropdown'
 import Totalvalue from '../component/Totalvalue'
 import Buttoncre from '../component/button'
-function Onetimecharges() {
-
+function Onetimecharges({onBack}) {
+    const handleBack=()=>{
+      onBack();
+    }
     const head = {
         title:'One Time Charges',
         color:'#6DAFB3',
@@ -70,7 +72,7 @@ function Onetimecharges() {
         </Box>
         <Totalvalue  total={total} />
         <Box sx={{display:'flex',justifyContent:'space-between'}}>
-      <Buttoncre val ={endbut1}/>
+      <Buttoncre val ={endbut1} handleBack={handleBack}/>
       <Buttoncre val ={endbut2}/>
       </Box>
         </Box>

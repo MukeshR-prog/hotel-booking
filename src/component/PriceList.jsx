@@ -32,8 +32,8 @@ const PriceList = () => {
   };
 
   return (
-    <Box elevation={3} style={{ padding: "20px", width: "400px", borderRadius: "8px" }}>
-      <Box sx={{backgroundColor:'#F8F9FB',padding:'10px 20px'}}>
+    <Box  style={{ padding: "16px", width: "400px", borderRadius: "8px" }}>
+      <Box sx={{backgroundColor:'#F8F9FB',padding:'10px 20px',borderRadius: "8px"}}>
       <Typography sx={{fontSize:'14px',fontWeight:'bold',color:'#4E5A6B'}}>
         UNIT PRICE DETAIL
       </Typography>
@@ -41,7 +41,7 @@ const PriceList = () => {
         height:'400px',overflow:'scroll',
         scrollbarWidth: 'none',
         '&::-webkit-scrollbar': {
-          display: 'none', // For Chrome, Safari, and Opera
+          display: 'none', 
         },
       }}>
       {billData.map((bill, index) => (

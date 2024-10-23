@@ -12,6 +12,7 @@ const UnitpricedetailsIndividual = ({ billItems, finalTotal }) => {
       padding="20px"
       borderRadius="8px"
       bgcolor="#F8F9FB"
+      marginTop={'15px'}
     >
         <Box height={'465px'}>
       <Typography

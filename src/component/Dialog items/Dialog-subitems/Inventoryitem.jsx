@@ -5,7 +5,12 @@ import ComponentDropdown from "../component/componentdropdown";
 import Buttoncre from "../component/button";
 import Buttoninvent from "../component/buttoninvent";
 import Detailshead from "../component/Detailshead";
-function Inventoryitem() {
+function Inventoryitem({onBack}) {
+
+  const handleBack=()=>{
+    onBack();
+  }
+
   const head = {
     title: "Inventory Item Component",
     color: "#B3A16D",
@@ -76,7 +81,7 @@ function Inventoryitem() {
         <Buttoninvent val={amt2} />
       </Box>
       <Box sx={{ display: "flex", justifyContent: "space-between" }}>
-        <Buttoncre val={endbut1} />
+        <Buttoncre val={endbut1} handleBack={handleBack}/>
         <Buttoncre val={endbut2} />
       </Box>
     </Box>

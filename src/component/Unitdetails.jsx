@@ -82,14 +82,13 @@ function Unitdetails() {
     const updatedUnits = [...units];
     const unit = updatedUnits[index];
 
-    // Toggle the color and discount status
     if (unit.amountColor === 'black') {
       unit.amountColor = 'orange';
-      unit.discounted = true; // Disable the discount when clicked
+      unit.discounted = true; 
       unit.disamount= true;
     } else {
       unit.amountColor = 'black';
-      unit.discounted = false; // Re-enable the discount when clicked again
+      unit.discounted = false; 
       unit.disamount= false;
     }
 
@@ -102,17 +101,17 @@ function Unitdetails() {
       <Grid container spacing={1} sx={{
         height: '450px', overflow: 'scroll', scrollbarWidth: 'none',
         '&::-webkit-scrollbar': {
-          display: 'none', // For Chrome, Safari, and Opera
+          display: 'none', 
         },
       }}>
         {units.map((unit, index) => (
           <Grid item xs={12} sm={6} md={6} lg={6} key={index}>
             <Paper elevation={3} sx={{ padding: '10px', position: 'relative', borderRadius: '6px',boxShadow:'none',border:'1px solid #E4E8EE',height:'230px',display:'flex',flexDirection:'column',justifyContent:'space-between' }}>
-              {/* Image and Delete button */}
+             
               <Box sx={{ position: 'relative' }}>
                 <Avatar
                   alt="Unit Image"
-                  src={Image} // Using a local image
+                  src={Image} 
                   variant="square"
                   sx={{ width: '100%', height: '110px', borderRadius: '5px' }}
                 />

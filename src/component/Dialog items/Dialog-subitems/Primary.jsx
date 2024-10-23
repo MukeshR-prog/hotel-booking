@@ -7,7 +7,12 @@ import Totalvalue from "../component/Totalvalue";
 import PricingCard from "../component/PricingCard ";
 import Buttoncre from "../component/button";
 
-function Primary() {
+function Primary({onBack}) {
+
+  const handleBack = () => {
+    onBack();
+  }
+
   const head = {
     title: "Primary Pricing Component",
     color: "#B3776D",
@@ -74,21 +79,21 @@ const endbut2={
         title="Recommended"
         value={120}
         unit="Sq. Yard/Monthly"
-        color="#59C36A" // Green color for Recommended
-        barValue={70} // Example: 70% bar width
+        color="#59C36A" 
+        barValue={70} 
       />
 
-      {/* Minimum Pricing Card */}
+    
       <PricingCard
         title="Minimum"
         value={100}
         unit="Sq. Yard/Monthly"
-        color="#FCA24C" // Orange color for Minimum
-        barValue={50} // Example: 50% bar width
+        color="#FCA24C"
+        barValue={50}
       />
       </Box>
       <Box sx={{display:'flex',justifyContent:'space-between'}}>
-      <Buttoncre val ={endbut1}/>
+      <Buttoncre val ={endbut1} handleBack={handleBack}/>
       <Buttoncre val ={endbut2}/>
       </Box>
     </Box>

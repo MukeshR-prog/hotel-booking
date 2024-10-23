@@ -57,15 +57,16 @@ function Primesecond({ onItemClick }) {
                         backgroundColor: item.light, 
                         marginTop: '15px',
                         borderRadius: '5px',
-                        cursor: 'pointer' // Add cursor for clickable effect
+                        cursor: 'pointer' 
                     }}
-                    onClick={() => onItemClick(item)} // Call the handler with the clicked item
+                    onClick={() => onItemClick(item)} 
                 >
                     <Box sx={{ display: 'flex', gap: '10px', alignItems:'center' }}>
                         <Typography sx={{ alignItems:'center', backgroundColor: item.dark, fontSize:'10px', fontWeight:'bold', color:'white', borderRadius:'50%', height:'10px', width:'10px', padding:'4px 6px 6px 6px' }}>{item.serial}</Typography>
                         <Typography sx={{ color: item.dark, fontSize:'14px', fontWeight:'semibold' }}>{item.text}</Typography>
                     </Box>
                     <Box sx={{ display: 'flex', gap: '15px', alignItems:'center' }}>
+
                         <IoIosInformationCircleOutline style={{color:'#CED3DD', fontSize:'16px'}} />
                         <FaChevronRight style={{ color: item.dark }} />
                     </Box>

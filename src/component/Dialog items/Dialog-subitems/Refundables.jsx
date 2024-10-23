@@ -5,7 +5,10 @@ import { Box } from '@mui/material'
 import ComponentDropdown from '../component/componentdropdown'
 import Totalvalue from '../component/Totalvalue'
 import Buttoncre from '../component/button'
-function Refundables() {
+function Refundables({onBack}) {
+    const handleBack=()=>{
+      onBack();
+    }
     const head = {
         title:'Refundable Price Component',
         color:'#6D80B3',
@@ -62,7 +65,7 @@ function Refundables() {
           <Revenue button={button2} title={title2} />
           <Totalvalue  total={total} />
           <Box sx={{display:'flex',justifyContent:'space-between'}}>
-      <Buttoncre val ={endbut1}/>
+      <Buttoncre val ={endbut1} handleBack={handleBack}/>
       <Buttoncre val ={endbut2}/>
       </Box>
         </Box>

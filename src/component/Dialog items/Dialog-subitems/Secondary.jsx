@@ -6,7 +6,11 @@ import ComponentDropdown from "../component/componentdropdown";
 import Totalvalue from "../component/Totalvalue";
 import Buttoncre from "../component/button";
 
-function Secondary() {
+function Secondary({onBack}) {
+  const handleBack =() =>{
+      onBack();
+  }
+
   const head = {
     title: "Secondary Components",
     color: "#896DB3",
@@ -72,7 +76,7 @@ function Secondary() {
       </Box>
       <Totalvalue  total={total} />
       <Box sx={{display:'flex',justifyContent:'space-between'}}>
-      <Buttoncre val ={endbut1}/>
+      <Buttoncre val ={endbut1} handleBack={handleBack}/>
       <Buttoncre val ={endbut2}/>
       </Box>
     </Box>

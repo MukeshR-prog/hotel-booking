@@ -35,11 +35,11 @@ function Datedetails() {
             <Grid container spacing={3}>
                 {date_array.map((item, index) => (
                     <Grid item xs={12} sm={6} md={4} key={index}>
-                        <Box elevation={3} style={{ textAlign: 'start' }}>
-                            <Typography className='date-description' fontSize={'8px'}> {item.des}</Typography>
+                        <Box sx={{ textAlign: 'start' ,display:'flex',flexDirection:'column',gap:'5px'}}>
+                            <Typography className='date-description' sx={{fontSize:'9px',fontWeight:'semibold'}}> {item.des}</Typography>
                             <Box sx={{display:'flex'}}>
                             <Typography fontSize={'12px'} >{item.date}</Typography>
-                            <Typography className='date-begin' fontSize={'12px'} >{item.status}</Typography>
+                            <Typography className='date-begin' fontSize={'12px'} fontWeight={'semibold'}>{item.status}</Typography>
                             </Box>
                         </Box>
                     </Grid>

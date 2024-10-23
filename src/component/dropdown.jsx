@@ -56,9 +56,8 @@ export default function Dropdown() {
         onClose={handleMenuClose}
         sx={{
           
-          border: '1px solid #E4EAEE',  // Add the border here
-          borderRadius: '8px',  // Optional: Rounding the corners
-          // Removed the boxShadow property
+          border: '1px solid #E4EAEE',  
+          borderRadius: '8px',  
           '& .MuiMenu-paper': {
             boxShadow: '0px 0px 12px #00000014',
             border:'1px solid #E4EAEE',
@@ -67,7 +66,7 @@ export default function Dropdown() {
         }}
         MenuListProps={{
           sx: {
-            padding: '0',  // Remove default padding
+            padding: '0',  
             boxShadow:'none'
           }
         }}
@@ -82,13 +81,13 @@ export default function Dropdown() {
               boxShadow:'none',
               fontSize: '14px',
               color: '#101010',
-              borderBottom: '1px solid #E4EAEE',  // Add border between items
+              borderBottom: '1px solid #E4EAEE', 
               '&:last-child': {
-                borderBottom: 'none',  // Remove the border for the last item
+                borderBottom: 'none',  
               },
               '&:hover': {
                 
-                backgroundColor: '#f5f5f5',  // Optional: Add hover effect
+                backgroundColor: '#f5f5f5', 
               },
               '& .MuiMenu-paper': {
                 boxShadow:'none',
