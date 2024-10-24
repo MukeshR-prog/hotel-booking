@@ -16,46 +16,54 @@ export default function Displayammenities() {
       name: "Ammenitie name",
       price: "$ 20.00",
       valid: "Valid Feb 22 - 12 Feb 23",
+      drop:true
     },
     {
       name: "Ammenitie name",
       price: "$ 20.00",
       valid: "Valid Feb 22 - 12 Feb 23",
+      drop:true
     },
     {
       name: "Ammenitie name",
       price: "$ 20.00",
       valid: "Valid Feb 22 - 12 Feb 23",
+      drop:true
     },
     {
       name: "Ammenitie name",
       price: "$ 20.00",
       valid: "Valid Feb 22 - 12 Feb 23",
+      drop:true
+    },
+    {
+      name: "Ammenitie name",
+      price: "$ 20.00",
+      valid: "Valid Feb 22 - 12 Feb 23", drop:true
     },
     {
       name: "Ammenitie name",
       price: "$ 20.00",
       valid: "Valid Feb 22 - 12 Feb 23",
+      drop:true
     },
     {
       name: "Ammenitie name",
       price: "$ 20.00",
       valid: "Valid Feb 22 - 12 Feb 23",
+       drop:true
     },
     {
       name: "Ammenitie name",
       price: "$ 20.00",
       valid: "Valid Feb 22 - 12 Feb 23",
+      drop:true
     },
     {
       name: "Ammenitie name",
       price: "$ 20.00",
       valid: "Valid Feb 22 - 12 Feb 23",
-    },
-    {
-      name: "Ammenitie name",
-      price: "$ 20.00",
-      valid: "Valid Feb 22 - 12 Feb 23",
+      drop:true
     },
   ];
   return (
@@ -82,6 +90,7 @@ export default function Displayammenities() {
             name={amenity.name}
             price={amenity.price}
             valid={amenity.valid}
+            drop={amenity.drop}
           />
           </Box>
         ))}

@@ -9,20 +9,20 @@
 
 .property-main-image {
     width: 100%;
-    height: 198px; /* Set a specific height */
+    height: 198px; 
     border-radius: 8px;
-    object-fit: cover; /* Ensure the image covers the area */
+    object-fit: cover; 
 }
 
 .property-thumbnail {
     width: 100%;
-    height: 92px; /* Set a specific height for thumbnails */
+    height: 92px; 
     border-radius: 8px;
-    object-fit: cover; /* Ensure the thumbnails maintain aspect ratio */
+    object-fit: cover; 
 }
 
 .property-thumbnail-box {
-    position: relative; /* Position relative to allow absolute positioning of span */
+    position: relative; 
     display: flex;
     justify-content: center;
     align-items: center;
@@ -39,7 +39,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: rgba(29, 29, 29, 0.45); /* Semi-transparent background */
+    background-color: rgba(29, 29, 29, 0.45); 
     color: white;
     font-size: 20px;
     font-weight: bold;

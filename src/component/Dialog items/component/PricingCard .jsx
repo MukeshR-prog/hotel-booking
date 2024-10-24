@@ -14,7 +14,7 @@ const PricingCard = ({ title, value, unit, color, barValue }) => {
         sx={{
           height: "5px",
           backgroundColor: "#E4E8EE", 
-          borderRadius: "2px",
+          borderRadius: "4px",
           marginTop: "5px",
           marginBottom: "10px",
           width: "100%",

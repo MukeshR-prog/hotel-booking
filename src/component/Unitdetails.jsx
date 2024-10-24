@@ -1,18 +1,26 @@
 import React, { useState } from 'react';
-import { Grid, Paper, Box, Typography, Avatar, Button, IconButton, Badge } from '@mui/material';
+import { Grid, Paper, Box, Typography, Avatar, Button, IconButton, Badge, Grid2 } from '@mui/material';
 import Image from '../assets/estate.jpeg'; // Import your image
 import bed from '../assets/bed.png';
 import home from '../assets/home.png';
 import bath from '../assets/bath.svg';
 import { RiDeleteBin6Line } from "react-icons/ri";
 import Customise from './Customize';
+import Totalvalue from './Dialog items/component/Totalvalue';
 
 function Unitdetails() {
+
+  const handleDelete = (index) => {
+    const updatedUnits = units.filter((_, i) => i !== index);
+    setUnits(updatedUnits);
+  };
+
+
   const initialUnits = [
     {
       estate: "Jumeirah Estate",
-      amount: "$ 1200",
-      amount2: "$ 900.00",
+      amount: 1200,
+      amount2: 900.00,
       description: "Jumeirah Golf Estate",
       sqfeet: "2000 Sq.Ft",
       bed: "2",
@@ -23,9 +31,9 @@ function Unitdetails() {
       amountColor: 'black'
     },
     {
-      estate: "Jumeirah Estate",
-      amount: "$ 1,200",
-      amount2: "$ 1,080.00",
+      estate: "Sapphire Estate",
+      amount: 1200,
+      amount2: 1080.00,
       description: "Jumeirah Golf Estate",
       sqfeet: "2400 Sq.Ft",
       bed: "3",
@@ -36,9 +44,9 @@ function Unitdetails() {
       amountColor: 'black'
     },
     {
-      estate: "Jumeirah Estate",
-      amount: "$ 1,500",
-      amount2: "$ 1,350.00",
+      estate: "Emerald Estate",
+      amount: 1500,
+      amount2: 1350.00,
       description: "Jumeirah Golf Estate",
       sqfeet: "2800 Sq.Ft",
       bed: "4",
@@ -49,9 +57,9 @@ function Unitdetails() {
       amountColor: 'black'
     },
     {
-      estate: "Jumeirah Estate",
-      amount: "$ 1,800",
-      amount2: "$ 1,620.00",
+      estate: "Pearl Estate",
+      amount: 1800,
+      amount2: 1620.00,
       description: "Jumeirah Golf Estate",
       sqfeet: "3200 Sq.Ft",
       bed: "5",
@@ -62,9 +70,9 @@ function Unitdetails() {
       amountColor: 'black'
     },
     {
-      estate: "Jumeirah Estate",
-      amount: "$ 2,000",
-      amount2: "$ 1,800.00",
+      estate: "Diamond Estate",
+      amount:  2000,
+      amount2:  1800.00,
       description: "Jumeirah Golf Estate",
       sqfeet: "3400 Sq.Ft",
       bed: "6",
@@ -96,10 +104,11 @@ function Unitdetails() {
   };
 
   return (
-    <Box sx={{ padding: '10px', height: '470px', display: 'flex', flexDirection: 'column', justifyContent: 'space-around' }}>
+    <Box sx={{ padding: '10px',  display: 'flex',  height: '420px',flexDirection: 'column', justifyContent: 'space-around' }}>
       <Typography sx={{ fontSize: '14px', color: '#4E5A6B',margin:'5px 0px' }}>Unit Details</Typography>
       <Grid container spacing={1} sx={{
-        height: '450px', overflow: 'scroll', scrollbarWidth: 'none',
+        
+        height: '410px', overflow: 'scroll', scrollbarWidth: 'none',backgroundColor:'#F5F7FA',
         '&::-webkit-scrollbar': {
           display: 'none', 
         },
@@ -116,6 +125,7 @@ function Unitdetails() {
                   sx={{ width: '100%', height: '110px', borderRadius: '5px' }}
                 />
                 <IconButton
+                  onClick={() => handleDelete(index)}
                   sx={{ position: 'absolute', top: '8px', right: '8px', backgroundColor: 'white', padding: '4px' }}
                 >
                   <RiDeleteBin6Line style={{fontSize:'11px',padding:'1px',color:'#FF4B4B'}} />
@@ -147,7 +157,7 @@ function Unitdetails() {
                     sx={{ fontSize: '14px', color: unit.amountColor, cursor: 'pointer' }}
                     onClick={() => handleAmountClick(index)}
                   >
-                   {unit.disamount ? unit.amount2 : unit.amount}
+                   $ {unit.disamount ? unit.amount2 : unit.amount}
                   </Typography>
                 </Box>
                 <Box sx={{

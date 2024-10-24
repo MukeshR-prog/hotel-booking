@@ -1,6 +1,7 @@
 .top-box{
+    
     display: flex;
-    padding: 10px 20px;
+    padding: 7px 14px;
     justify-content: space-between;
     background-color: white;
 }

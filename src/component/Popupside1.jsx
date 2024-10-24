@@ -17,7 +17,7 @@ export default function Popupside1() {
   return (
     <Box className="property-card-container">
      
-      <Grid container spacing={2}>
+      <Grid container spacing={1}>
         <Grid item xs={7} className="main-image-container">
           <img
             src={Image1}

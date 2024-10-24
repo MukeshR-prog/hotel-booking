@@ -1,3 +1,4 @@
+import { Box } from '@mui/material';
 import React from 'react';
 import { BiChevronRight } from 'react-icons/bi'; 
 
@@ -17,6 +18,7 @@ const Breadcrump = () => {
           {index !== 0 && <BiChevronRight size={18} color="#4A90E2" />}
           {index === steps.length - 1 ? (
             <span style={{ fontWeight: 'bold', display: 'flex', alignItems: 'center',justifyContent:'center' }}>
+              <Box sx={{border:'1px solid #CBD7F6',alignItems:'center',padding:'1.3px',borderRadius:'25px'}}>
               <span
                 style={{
                     display:"inline-block",
@@ -29,12 +31,13 @@ const Breadcrump = () => {
                     justifyContent:'center',
                     textAlign: 'center',
                     lineHeight: '23px',
-                    marginRight: '5px',
+                    marginRight:'1px',
                     fontSize: '12px',
                 }}
               >
                 {index}
               </span>
+              </Box>
               {step}
             </span>
           ) : (

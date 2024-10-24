@@ -1,23 +1,16 @@
-import { Badge, Box, Radio, Switch, Typography } from "@mui/material";
+import { Badge, Box, Checkbox, Radio, Switch, Typography } from "@mui/material";
 import React, { useState } from "react";
 import estate from "../assets/estate.jpeg";
-
-// import * as React from 'react';
 import { styled } from '@mui/material/styles';
-// import FormGroup from '@mui/material/FormGroup';
 import FormControlLabel from '@mui/material/FormControlLabel';
-// import Switch from '@mui/material/Switch';
-// import Stack from '@mui/material/Stack';
-// import Typography from '@mui/material/Typography';
 
-
-
-export default function Addamenities({ name, price, valid }) {
+export default function Addamenities({ name, price, valid, drop }) {
   const [checked, setChecked] = useState(false);
   const handleChange = (event) => {
     setChecked(event.target.checked);
   };
 
+  
   const IOSSwitch = styled((props) => (
     <Switch focusVisibleClassName=".Mui-focusVisible" disableRipple {...props} />
   ))(({ theme }) => ({
@@ -83,7 +76,7 @@ export default function Addamenities({ name, price, valid }) {
         }}
       >
         <Box
-          sx={{ display: "flex", padding: "10px 10px 6px 10px", gap: "5px",alignItems:'center' }}
+          sx={{ display: "flex", padding: "10px 10px 6px 10px", gap: "15px",alignItems:'center' }}
         >
           <Box>
             <img
@@ -141,7 +134,7 @@ export default function Addamenities({ name, price, valid }) {
 
         </Box>
       </Box>
-      {checked && (
+      {checked && drop && (
         <Box
           sx={{
             display: "flex",
@@ -154,7 +147,8 @@ export default function Addamenities({ name, price, valid }) {
             borderBottomRightRadius: "10px",
           }}
         >
-          <Radio size="small"></Radio>
+          {/* <input type="checkbox" ></input> */}
+          <Checkbox size="small" sx={{borderRadius:'50%'}}></Checkbox>
           <Typography sx={{ color: "#4E5A6B", fontSize: "12px" }}>
             Free applicability
           </Typography>

@@ -25,6 +25,7 @@ import Onetimecharges from "./Dialog items/Dialog-subitems/Onetimecharges";
 import Refundables from "./Dialog items/Dialog-subitems/Refundables";
 import Inventoryitem from "./Dialog items/Dialog-subitems/Inventoryitem";
 import Parkingslot from "./Dialog items/Dialog-subitems/Parkingslot";
+import DisplayUtilities from "./DisplayUtilities";
 
 export default function Customise() {
   const [anchorEl, setAnchorEl] = useState(null);
@@ -194,9 +195,44 @@ export default function Customise() {
           <Displayammenities />
         </DialogContent>
       </Dialog>
-
-     
       <Dialog
+        open={openDialog === "Add Utilities"}
+        onClose={handleDialogClose}
+        maxWidth={false} 
+        fullWidth
+        PaperProps={{
+          sx: {
+            width: "auto", 
+            maxWidth: "90vw", 
+            padding: 0,
+          },
+        }}
+      >
+        <DialogTitle
+          sx={{
+            fontSize: "16px",
+            fontWeight: "bold",
+            display: "flex",
+            justifyContent: "space-between",
+            alignItems: "center",
+            borderBottom: "1px solid #E4E8EE",
+          }}
+        >
+          Add Utility
+          <IconButton
+            aria-label="close"
+            onClick={handleDialogClose}
+            className="dialog-close-button"
+          >
+            <IoCloseOutline />
+          </IconButton>
+        </DialogTitle>
+        <DialogContent>
+          <DisplayUtilities/>
+        </DialogContent>
+      </Dialog>
+     
+      {/* <Dialog
         open={openDialog === "Add Utilities"}
         onClose={handleDialogClose}
         maxWidth={false} 
@@ -232,7 +268,7 @@ export default function Customise() {
           <Popupside1 />
           <Unitpricedetails />
         </DialogContent>
-      </Dialog>
+      </Dialog> */}
 
    
       <Dialog

@@ -1,4 +1,4 @@
-import { Box, Typography } from "@mui/material";
+import { Box, TextField, Typography } from "@mui/material";
 import React from "react";
 
 function Totalvalue({total}) {
@@ -23,7 +23,26 @@ function Totalvalue({total}) {
             fontWeight: "semibold",
           }}
         >
-          {total.value}
+          <TextField
+          variant="outlined"
+          placeholder={total.value}
+          sx={{
+            '& .MuiOutlinedInput-root': {
+              padding: '0px', // Remove padding around the input field
+              height: 'auto', // Let the height be determined by content
+            },
+            '& .MuiOutlinedInput-input': {
+              padding: '0px', // Remove padding inside the input field
+              width: 'auto', // Adjust width to content or container
+              fontSize: '14px', // Customize font size if needed
+            },
+            '& .MuiOutlinedInput-notchedOutline': {
+              borderColor: 'transparent' ,// If you want no border or customize it
+              border:'none'
+            }
+          }}
+          ></TextField>
+          {/* {total.value} */}
         </Typography>
         <Typography
           sx={{

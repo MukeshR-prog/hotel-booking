@@ -22,14 +22,14 @@ function Quotation() {
   const quoteAmount = "$ 4,148.00";
 
   return (
-    <Box sx={{ borderRadius: "8px", padding: "5px 5px 0 5px" ,margin:'10px 10px 0 10px'}}>
+    <Box sx={{ borderRadius: "8px", padding: "5px 5px 0 5px" ,margin:'10px 10px 0 10px',height:'100%'}}>
      
       <Typography sx={{ color: "#4E5A6B", fontSize: "14px", mb: 2 }}>
         Quotation Summary
       </Typography>
 
       
-      <Box sx={{height:'439px',display:'flex',flexDirection:'column',justifyContent:'space-between',backgroundColor: "#F7F8FA",alignItems:'center'}}>
+      <Box sx={{height:'95%',display:'flex',flexDirection:'column',justifyContent:'space-between',backgroundColor: "#F7F8FA",alignItems:'center'}}>
       <TableContainer style={{  padding: "5px",margin:'5px' ,alignItems:'center'}}>
         <Table>
           <TableBody>
